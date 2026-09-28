@@ -1,0 +1,7 @@
+{
+  "recall50": 0.882835,
+  "displayed_grade": 0.88,
+  "max_grade": 1,
+  "source": "Result shown on the user-provided platform screenshot",
+  "answer_sha256": "ef4ba4b73e9cbb7821d4b7c2a1899b97f8c962adde06a81a70f81dd51c9910ea"
+}

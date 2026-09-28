@@ -1,0 +1,9 @@
+{
+  "status": "cancelled_by_user",
+  "cold_reproduction_completed": false,
+  "byte_identical_to_submitted": null,
+  "note": "Полный повторный расчёт на CPU с пустым кэшем остановлен по просьбе пользователя до получения нового CSV. Это не подтверждение полного воспроизведения. Приложенный answer.csv сохранён без изменений и прошёл проверку формата; ноутбук выполнен без ошибок.",
+  "submitted_answer_sha256": "ef4ba4b73e9cbb7821d4b7c2a1899b97f8c962adde06a81a70f81dd51c9910ea",
+  "notebook_executed_code_cells": 15,
+  "notebook_errors": 0
+}

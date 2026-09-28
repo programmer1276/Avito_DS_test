@@ -1,0 +1,29 @@
+{
+  "reference_rows": 405404,
+  "reference_query_texts": 62206,
+  "rank_train_queries": 8000,
+  "training_rows": 1521023,
+  "original_positive_pairs": 8468,
+  "retrieved_positive_pairs": 8244,
+  "unretrieved_positive_pairs_excluded": 224,
+  "feature_count": 62,
+  "hyperparameters": {
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.06,
+    "l2_regularization": 10.0,
+    "max_iter": 500,
+    "min_samples_leaf": 40,
+    "max_bins": 127,
+    "random_state": 20260929
+  },
+  "training_pool": "expanded",
+  "sampling_seed": 20260930,
+  "hard_candidates": 70,
+  "random_candidates": 120,
+  "negative_weight": "1 / inclusion_probability",
+  "positive_weight": "50 / retrieved_positive_count_per_query",
+  "positive_injection_outside_pool": false,
+  "training_pool_macro_recall": 0.9728083333333334,
+  "ranker_sha256": "32ca37475f40c77e4f9153142127b40529d27e925b1870375ba17fe61d003b2b",
+  "verification": "Single fit on the saved feature matrix gave exactly the same predictions as staged warm-start fitting; see results/retraining_check.json."
+}

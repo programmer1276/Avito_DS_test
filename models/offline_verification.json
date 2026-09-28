@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "load_local_files_only": true,
+  "hf_hub_offline": true,
+  "device": "cpu",
+  "sample_count": 3,
+  "max_abs_difference_from_original_mps": 1.4528632164001465e-07,
+  "tolerance_atol": 1e-05,
+  "tolerance_rtol": 1e-05,
+  "shape": [
+    3,
+    384
+  ]
+}

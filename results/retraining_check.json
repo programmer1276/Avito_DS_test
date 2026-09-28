@@ -1,0 +1,26 @@
+{
+  "parameters": {
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.06,
+    "l2_regularization": 10.0,
+    "max_iter": 500,
+    "max_bins": 127,
+    "min_samples_leaf": 40,
+    "random_state": 20260929,
+    "early_stopping": false,
+    "warm_start": false
+  },
+  "training_rows": 1521023,
+  "feature_count": 62,
+  "development_rows": 1475159,
+  "max_abs_probability_difference": 0.0,
+  "allclose_atol_1e_12_rtol_1e_12": true,
+  "probabilities_exactly_equal": true,
+  "reference_recall50": 0.9143333333333333,
+  "single_fit_recall50": 0.9143333333333333,
+  "per_query_recalls_exactly_equal": true,
+  "queries_with_identical_top50_set": 1000,
+  "query_count": 1000,
+  "elapsed_seconds": 59.419172048568726,
+  "holdout_evaluated": false
+}

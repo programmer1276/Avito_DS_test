@@ -1,0 +1,106 @@
+{
+  "valid": true,
+  "validator_cases": {
+    "valid_exact_50": true,
+    "utf8_bom": true,
+    "wrong_query_case": true,
+    "double_space": true,
+    "duplicate_item": true,
+    "uppercase_item": true,
+    "extra_column": true,
+    "extra_row": true,
+    "missing_row": true,
+    "too_many_items": true,
+    "too_few_items": true,
+    "non_corpus_item": true,
+    "invalid_utf8": true
+  },
+  "python_files_sha256": {
+    "baseline_utils.py": "89a252d4e0efb1f02dfe525bed19e8635d9cd7e4b162800d8fde05711bffee22",
+    "extra_retrieval.py": "7b0ebc0da2c5ef0c0467c57f34cb83dcf588e474567a11dd04765d2db0ef0ea1",
+    "intent_model.py": "b1d8e72be79a2eab8fd3e34ee724c85dcfcdce38290bb89b946ce696604b8544",
+    "rerank_model.py": "b5561da193eebc8211f71da7c71ee8f420f5e0b749cc8f5f07eb4a4463777b32",
+    "retrieval.py": "7a93a11aa9be8e746708b1307cd1e7d959bfb0caae375c8e3942bac3f701cbf9",
+    "solution_pipeline.py": "2ad5e24b55f29c28f504c43e2f7646d82dbbbbddac34ead15aec28891785cb97",
+    "splits.py": "245ecba5f2dfefd120dd68a65ec4ad29384fe93c0d30a4b952141fe63aed7b3a",
+    "train_model.py": "d70a77937e13242c40bec4365faeba1b674dd85479a93d5e2c9347ea4229a14f",
+    "validate_submission.py": "89c48bda4136ce7d5f74fe12e894cdf60ab43a0c031ca62eb491198bcf686b25"
+  },
+  "benchmark_id_constants_in_python": [],
+  "benchmark_id_strings_in_ranker_pickle": [],
+  "ranker": {
+    "type": "HistGradientBoostingClassifier",
+    "n_features": 62,
+    "n_iter": 500,
+    "classes": [
+      0,
+      1
+    ],
+    "sha256": "32ca37475f40c77e4f9153142127b40529d27e925b1870375ba17fe61d003b2b"
+  },
+  "feature_names_contain_query_or_item_id": false,
+  "encoder_manifest_checks": [
+    {
+      "file": "model.safetensors",
+      "bytes": 470641600,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 443,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 167,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "sentencepiece.bpe.model",
+      "bytes": 5069051,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "config.json",
+      "bytes": 655,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 17082730,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "sentence_bert_config.json",
+      "bytes": 57,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "modules.json",
+      "bytes": 387,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "file": "1_Pooling/config.json",
+      "bytes": 200,
+      "size_matches": true,
+      "sha256_matches": true
+    }
+  ],
+  "manual_review": {
+    "candidate_generation": "Feature-only lexical, geographic, category and semantic scores; no positives are injected at prediction.",
+    "identifier_usage": "Item identifiers align caches and select output IDs; query_id identifies output rows. IDs are not ranker features.",
+    "training_labels": "Expanded-pool sampling includes only already-retrieved positives; missing positives are not forced into training.",
+    "network": "Prediction loads a pinned local encoder with local_files_only and HF_HUB_OFFLINE. No prediction API is called.",
+    "scope": "Checks source constants, owned ranker strings, trained-feature schema and encoder hashes; not a formal proof for arbitrary binary code.",
+    "holdout": "No fresh-holdout query file or label file was opened by this audit."
+  }
+}

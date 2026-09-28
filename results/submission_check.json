@@ -1,0 +1,44 @@
+{
+  "valid": true,
+  "rows": 2452,
+  "columns": [
+    "query_id",
+    "answer"
+  ],
+  "min_candidates": 50,
+  "max_candidates": 50,
+  "total_candidates": 122600,
+  "config": {
+    "version": 2,
+    "ranker_file": "ranker.pkl",
+    "feature_names_file": "feature_names.json",
+    "encoder_dir": "e5-small",
+    "encoder_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "query_mode": "plain64",
+    "views": [
+      "title",
+      "full"
+    ],
+    "pool": "expanded",
+    "training_pool": "expanded",
+    "baseline_log_weight": 0.0,
+    "sampling_correction": 0.0,
+    "intent": {
+      "alpha": 0.2,
+      "use_filters": true
+    },
+    "hyperparameters": {
+      "max_leaf_nodes": 31,
+      "learning_rate": 0.06,
+      "l2_regularization": 10.0,
+      "max_iter": 500,
+      "min_samples_leaf": 40,
+      "max_bins": 127,
+      "random_state": 20260929
+    },
+    "dev_recall50": 0.9143333333333333,
+    "frozen_at_utc": "2026-09-28T19:54:47.089360+00:00"
+  },
+  "seconds": 113.62148594856262,
+  "sha256": "ef4ba4b73e9cbb7821d4b7c2a1899b97f8c962adde06a81a70f81dd51c9910ea"
+}
